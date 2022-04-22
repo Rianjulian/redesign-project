@@ -1,0 +1,49 @@
+:root{
+    --accent-color: #ff9534;
+    --start-gradient: #EC9F05;
+    --end-gradient: #FF6B00;
+    --lato-font: "Lato", sans-serif;
+    --heading: "poppins", sans-serif;
+    --hero-title: "Roboto Condensed", sans-serif;
+    --hero-paragraph: "Raleway", sans-serif;
+}
+
+.lato{
+    font-family: var(--lato-font);
+}
+
+.poppins{
+    font-family: var(--heading);
+}
+
+.roboto{
+    font-family: var(--hero-title);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.raleway{
+    font-family: var(--hero-paragraph);
+}
+
+.hero-element{
+    background-image:url("images/bg-3.svg") ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.partner{
+    background: url("images/bg-transparent 2.png"), linear-gradient(90deg, rgba(255,185,5,1) 0%, rgba(255,107,0,1) 100%);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+}
+
+.about-us{
+    background-image: url("images/about-us.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover ;
+    width: 100%;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@400;600;700;800&family=Raleway:wght@300&family=Roboto+Condensed:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="design-system.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="grid grid-cols-2 bg-white px-8 py-5 items-center lg:bg-transparent lg:py-1 lg:py-6 lg:px-24">
+        <div class="logo w-32 lg:w-60">
+            <img src="images/Logo-tads.svg" alt="logo">
+        </div>
+        <span id="hamburgerButton" class="iconify lg:hidden lg:order-2 justify-self-end text-4xl"
+            data-icon="fluent:list-24-filled" style="color: #ff9534;"></span>
+        <div id="menu"
+            class="hidden mt-4 py-5 w-full h-screen text-white gap-4 bg-orange-600 col-start-1 col-end-4 justify-items-center lg:mt-0 lg:py-0 lg:h-fit lg:bg-transparent lg:text-black lg:grid lg:gap-0 lg:items-center lg:grid-flow-col lg:row-start-1 lg:row-end-1 lg:col-start-2 lg:col-end-2 lg:order-1">
+            <div class="tab-link lato">
+                <a href="#" class="text-base h-fit p-5 lg:p-1">Home</a>
+            </div>
+            <div class="tab-link lato">
+                <a href="#" class="text-base h-fit p-5 lg:p-1">Our Service</a>
+            </div>
+            <div class="tab-link lato">
+                <a href="#" class="text-base h-fit p-5 lg:p-1">Career</a>
+            </div>
+            <div class="tab-link lato button">
+                <button
+                    class="border text-orange-600 bg-white py-3 px-7 lg:bg-orange-500 lg:text-white lg:py-2 lg:px-5 rounded-full">
+                    <a href="#" class="text-base h-fit p-5 lg:p-1">Contact</a>
+                </button>
+            </div>
+            <div id="closeButton" class="tab-link h-fit lg:hidden p-2 border rounded-full">
+                <span class="iconify text-3xl" data-icon="eva:close-outline" style="color: #ffffff;"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="head-element">
+            <div class="jumbotron grid h-screen gap-8 px-8 my-8 py-8 lg:py-12 lg:h-fit lg:px-24 lg:grid-cols-2">
+                <div class="jumbotron-content grid justify-items-start content-center gap-2 lg:w-2/3 lg:-mt-40">
+                    <span
+                        class="text-white bg-white h-fit py-3 px-7 bg-orange-500 lg:text-white lg:py-2 lg:px-2 rounded-full">
+                        Twosides.id</span>
+                    <h1
+                        class="roboto text-4xl font-black mt-5 w-11/12 lg:mt-8 lg:w-full lg:h-fit lg:leading-tight lg:text-5xl">
+                        Development services
+                        <span class="text-orange-600">system</span>
+                        in indonesia</h1>
+                    <p class="raleway text-base w-3/4 lg:mt-1 lg:text-xl lg:w-8/12">Our provide solutions for all
+                        problems
+                        in
+                        development your online business.</p>
+                </div>
+                <div class="jumbotron-images">
+                    <img src="images/jumbotron-image.png" class="lg:w-screen" alt="mockup-device">
+                </div>
+            </div>
+            <div class="partner grid h-3/6 -mt-40 lg:grid-cols-2 lg:px-24 lg:items-center">
+                <h1 class="font-bold text-white text-4xl">OUR <br> PARTNER</h1>
+                <div class="grid gap-14 lg:grid-flow-col lg:items-center">
+                    <img src="images/payroll 1.png" alt="payroll">
+                    <img src="images/logo-dummy.png" alt="dummy">
+                    <img src="images/waktu-com.png" alt="waktu-kerja.com">
+                </div>
+            </div>
+        </section>
+
+        <section class="about-us mt-8">
+            <div class="grid content-center justify-content-center gap-8 opacity-80 bg-black h-full lg:px-80">
+                <div class="text-left leading-3">
+                    <h2 class="lato text-orange-600 text-xl leading-5">INTRO</h2>
+                    <h1 class="poppins font-bold text-white text-4xl">ABOUT US</h1>
+                </div>
+                <p
+                    class="poppins text-white text-justify tracking-wider lg:leading-loose lg:text-base lg:font-thin lg:w-10/12">
+                    TADS (Technology Api Dua Sisi) is a developer company engaged in designing digital
+                    systems in various types of industries. We were born from the business need to digitize the systems
+                    within their company.</p>
+
+                <p
+                    class="poppins text-white text-justify tracking-wider lg:leading-loose lg:text-base lg:font-thin lg:w-10/12">
+                    Some of our superior products such as Ordering System for BnB industry, Attendance for HRD needs,
+                    and Ledring System for company financial management.</p>
+                </p>
+            </div>
+        </section>
+
+        <section class="value-proposition ">
+            <div class="grid content-center justify-content-center gap-20 bg-black h-screen lg:px-24 lg:py-40">
+                <div class="text-left leading-3 text-center">
+                    <h2 class="lato text-orange-600 leading-loose text-xl leading-5">TEAM</h2>
+                    <h1 class="poppins font-bold text-white text-4xl">WHY CHOOSE US?</h1>
+                </div>
+                <div class="grid grid-flow-col justify-between">
+                    <div class="grid gap-5">
+                        <div class="flex items-center gap-4">
+                            <img src="images/briefing.png" alt="briefing">
+                            <h1 class="text-white text-xl">Briefing</h1>
+                        </div>
+                        <h2 class="lato font-light text-white leading-relaxed w-56">Briefing is carried out so that the product
+                            which is done according 
+                            to client needs.</h2>
+                    </div>
+                    <div class="grid gap-5">
+                        <div class="flex items-center gap-4">
+                            <img src="images/development.png" alt="development">
+                            <h1 class="text-white text-xl">Development</h1>
+                        </div>
+                        <h2 class="lato font-light text-white leading-relaxed w-56">implementation ideas into Code and made accordingly Client Customization.</h2>
+                    </div>
+                    <div class="grid gap-5">
+                        <div class="flex items-center gap-4">
+                            <img src="images/launch.png" alt="launch">
+                            <h1 class="text-white text-xl">launch</h1>
+                        </div>
+                        <h2 class="lato font-light text-white leading-relaxed w-56">Finally, System will be ready
+                            used after work very detailed 
+                            and Customization.</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product h-screen lg:px-24 lg:py-40">
+            <div class="text-left leading-3 text-center">
+                <h2 class="lato text-orange-600 leading-loose text-xl leading-5">SERVICE</h2>
+                <h1 class="poppins font-bold text-black text-4xl">OUR SERVICE</h1>
+            </div>
+        </section>
+    </main>
+
+    <button class="w-24 min-w-full ml-1 px-4 py-4 rounded-full bg-orange-600 text-white">PRODUCT</button>
+    <button class="w-24 min-w-full mr-1 px-4 py-4 rounded-full text-black">PROJECT</button>
+
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+</body>
+
+</html>
