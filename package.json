@@ -1,0 +1,26 @@
+{
+  "name": "project-redesign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style": "npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rianjulian/redesign-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rianjulian/redesign-project/issues"
+  },
+  "homepage": "https://github.com/Rianjulian/redesign-project#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.5",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.24"
+  }
+}

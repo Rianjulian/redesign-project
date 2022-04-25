@@ -27,23 +27,38 @@
 }
 
 .hero-element{
-    background-image:url("images/bg-3.svg") ;
+    background-image:url("../images/bg-3.svg") ;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 }
 
 .partner{
-    background: url("images/bg-transparent 2.png"), linear-gradient(90deg, rgba(255,185,5,1) 0%, rgba(255,107,0,1) 100%);
+    background: url("../images/bg-transparent 2.png"), linear-gradient(90deg, rgba(255,185,5,1) 0%, rgba(255,107,0,1) 100%);
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
 }
 
 .about-us{
-    background-image: url("images/about-us.png");
+    background-image: url("../images/about-us.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover ;
     width: 100%;
+}
+
+.career{
+    background-image: url("../images/career.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    width: 100%;
+}
+
+.card:hover{
+    background-image: url("../images/bg-3.svg");
+    background-repeat: no-repeat;
+    background-position: center -350px;
+    background-size: cover;
 }
