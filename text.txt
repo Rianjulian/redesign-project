@@ -147,3 +147,5 @@
 </body>
 
 </html>
+
+| lg:mt-0 lg:py-0 lg:h-fit lg:bg-transparent lg:text-black lg:grid lg:gap-0 lg:items-center lg:grid-flow-col lg:row-start-1 lg:row-end-1 lg:col-start-2 lg:col-end-2 lg:order-1
