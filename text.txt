@@ -130,7 +130,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>xl:-mt-48 lg:-my-48
 
         <section class="product h-screen lg:px-24 lg:py-40">
             <div class="text-left leading-3 text-center">
@@ -148,4 +148,5 @@
 
 </html>
 
+px-8 py-24 grid content-center justify-content-center gap-8 opacity-80 bg-black h-full | md:py-28 md:px-24 | lg:h-screen lg:px-72 lg:w-fit lg:place-items-center
 | lg:mt-0 lg:py-0 lg:h-fit lg:bg-transparent lg:text-black lg:grid lg:gap-0 lg:items-center lg:grid-flow-col lg:row-start-1 lg:row-end-1 lg:col-start-2 lg:col-end-2 lg:order-1

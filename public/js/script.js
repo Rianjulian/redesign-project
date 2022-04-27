@@ -58,16 +58,28 @@ hamburger.addEventListener('click', function() {
                 animateIn: 'fadeIn',
                 animateOut: 'fadeOut',
             },
+            900:{
+                items: 3,
+                nav: false,
+                dots: false,
+                loop: true,
+                stagePadding: 100,
+                margin: 100,
+                autoplay: true,
+                smartSpeed: 500,
+                animateIn: 'fadeIn',
+                animateOut: 'fadeOut',
+            },
             1200: {
                 items: 2,
                 nav: false,
                 dots: false,
                 loop: true,
                 autoplay: true,
-                smartSpeed: 500,
+                smartSpeed: 800,
                 animateIn: 'fadeIn',
                 animateOut: 'fadeOut',
-                stagePadding: 220,
+                stagePadding: 200,
                 margin: 220
             }
         }

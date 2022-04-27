@@ -1,4 +1,4 @@
-:root{
+:root {
     --accent-color: #ff9534;
     --start-gradient: #EC9F05;
     --end-gradient: #FF6B00;
@@ -8,47 +8,47 @@
     --hero-paragraph: "Raleway", sans-serif;
 }
 
-.lato{
+.lato {
     font-family: var(--lato-font);
 }
 
-.poppins{
+.poppins {
     font-family: var(--heading);
 }
 
-.roboto{
+.roboto {
     font-family: var(--hero-title);
     text-transform: uppercase;
     line-height: 1.2;
 }
 
-.raleway{
+.raleway {
     font-family: var(--hero-paragraph);
 }
 
-.hero-element{
-    background-image:url("../images/bg-3.svg") ;
+.hero-element {
+    background-image: url("../images/bg-3.svg");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center -300px;
     background-size: cover;
 }
 
-.partner{
-    background: url("../images/bg-transparent 2.png"), linear-gradient(90deg, rgba(255,185,5,1) 0%, rgba(255,107,0,1) 100%);
+.partner {
+    background: url("../images/bg-transparent 2.png"), linear-gradient(90deg, rgba(255, 185, 5, 1) 0%, rgba(255, 107, 0, 1) 100%);
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
 }
 
-.about-us{
+.about-us {
     background-image: url("../images/about-us.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover ;
+    background-size: cover;
     width: 100%;
 }
 
-.career{
+.career {
     background-image: url("../images/career.png");
     background-repeat: no-repeat;
     background-position: left top;
@@ -56,13 +56,24 @@
     width: 100%;
 }
 
-.card:hover{
+.card:hover {
     background-image: url("../images/bg-3.svg");
     background-repeat: no-repeat;
-    background-position: center -350px;
+    background-position: center -450px;
     background-size: cover;
+    box-shadow:
+        0px 3.2px 1.8px rgba(0, 0, 0, 0.007),
+        0px 7.6px 4.4px rgba(0, 0, 0, 0.007),
+        0px 14.4px 8.3px rgba(0, 0, 0, 0.007),
+        0px 25.7px 14.7px rgba(0, 0, 0, 0.007),
+        0px 48px 27.6px rgba(0, 0, 0, 0.01),
+        0px 115px 66px rgba(0, 0, 0, 0.03);
+    transition: all 0.5s ease-in-out;
+
+
 }
 
-iframe{
+iframe {
     box-shadow: 1px 0px 1px 4px orange;
+    height: 520px;
 }
