@@ -15,7 +15,8 @@ hamburger.addEventListener('click', function() {
     $('.owl-carousel').owlCarousel({
         loop: true,
         navText: ["<span class='nav-btn prev-slide'><</span>", "<span class='nav-btn next-slide'>></span>"],
-        // margin: 10,
+        responsiveClass:true,
+        center:true,
         responsive: {
             0: {
                 items: 1,
@@ -24,41 +25,30 @@ hamburger.addEventListener('click', function() {
                 smartSpeed: 800,
                 animateIn: 'linear',
                 animateOut: 'linear',
-                stagePadding: 60,
+                stagePadding: 80,
                 margin: 100,
                 nav: false,
                 dots: false
             },
-            400: {
-                items: 1,
-                stagePadding: 80,
-                margin: 100,
-                nav: false,
-                dots: false,
-                autoplay: true,
-                smartSpeed: 800,
-                animateIn: 'fadeIn',
-                animateOut: 'fadeOut',
-            },
-            578: {
-                items: 2,
+            768: {
+                items: 3,
                 nav: false,
                 margin: 100,
-                stagePadding: 100,
+                stagePadding: 50,
             },
-            700: {
-                items: 2,
+            1024: {
+                items: 3,
                 nav: false,
                 dots: false,
                 loop: true,
-                stagePadding: 100,
-                margin: 100,
+                stagePadding: 20,
+                margin: 80,
                 autoplay: true,
                 smartSpeed: 500,
                 animateIn: 'fadeIn',
                 animateOut: 'fadeOut',
             },
-            900:{
+            1280:{
                 items: 3,
                 nav: false,
                 dots: false,
@@ -70,17 +60,18 @@ hamburger.addEventListener('click', function() {
                 animateIn: 'fadeIn',
                 animateOut: 'fadeOut',
             },
-            1200: {
-                items: 2,
+            1440: {
+                items: 3,
                 nav: false,
                 dots: false,
                 loop: true,
+                center: true,
                 autoplay: true,
                 smartSpeed: 800,
                 animateIn: 'fadeIn',
                 animateOut: 'fadeOut',
-                stagePadding: 200,
-                margin: 220
+                stagePadding: 20,
+                margin: 120,
             }
         }
     })
