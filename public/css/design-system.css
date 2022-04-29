@@ -95,3 +95,16 @@ iframe {
     box-shadow: 1px 0px 1px 4px orange;
     height: 520px;
 }
+
+#product-content{
+    display:grid;
+}
+
+#project-content{
+    display: none;
+}
+
+.on-active{
+    background-color:rgb(249 115 22);
+    color:white;
+}

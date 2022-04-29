@@ -2,6 +2,24 @@ const hamburger = document.getElementById("hamburgerButton");
 const menu = document.getElementById("menu");
 const closeButton =  document.getElementById("closeButton");
 const nav = document.querySelector("nav");
+const project = document.getElementById('project');
+const product = document.getElementById('product');
+const subProject = document.getElementById('project-content');
+const subProduct = document.getElementById('product-content');
+
+product.classList.add('on-active');
+product.addEventListener('click', () => {
+    subProject.style.display = "none";
+    subProduct.style.display = "grid";
+    project.classList.remove('on-active');
+    product.classList.add('on-active');
+});
+project.addEventListener('click', () => {
+    subProject.style.display = "grid";
+    subProduct.style.display = "none";
+    project.classList.add('on-active');
+    product.classList.remove('on-active');
+});
 
 hamburger.addEventListener('click', function() {
     menu.classList.remove('hidden');
@@ -30,11 +48,25 @@ hamburger.addEventListener('click', function() {
                 nav: false,
                 dots: false
             },
+            540: {
+                items: 1,
+                nav: false,
+                dots: false,
+                margin: 200,
+                stagePadding: 150,
+            },
+            640: {
+                items: 1,
+                nav: false,
+                dots: false,
+                margin: 120,
+                stagePadding: 80,
+            },
             768: {
                 items: 3,
                 nav: false,
-                margin: 100,
-                stagePadding: 50,
+                margin: 120,
+                stagePadding: 40,
             },
             1024: {
                 items: 3,
@@ -53,7 +85,7 @@ hamburger.addEventListener('click', function() {
                 nav: false,
                 dots: false,
                 loop: true,
-                stagePadding: 100,
+                stagePadding: 10,
                 margin: 100,
                 autoplay: true,
                 smartSpeed: 500,
@@ -70,8 +102,8 @@ hamburger.addEventListener('click', function() {
                 smartSpeed: 800,
                 animateIn: 'fadeIn',
                 animateOut: 'fadeOut',
-                stagePadding: 20,
-                margin: 120,
+                stagePadding: 0,
+                margin: 10,
             }
         }
     })
