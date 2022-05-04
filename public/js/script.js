@@ -1,3 +1,4 @@
+// @ts-nocheck
 const hamburger = document.getElementById('hamburgerButton');
 const nav = document.querySelector('nav');
 const menu = document.getElementById('menu');
@@ -8,12 +9,17 @@ const subProject = document.getElementById('project-content');
 const subProduct = document.getElementById('product-content');
 
 hamburger.addEventListener("click", function () {
-    menu.classList.remove("hidden");
+    // menu.classList.remove("hidden");
+    menu.classList.remove("translate-x-full");
     menu.classList.add("flex");
+    menu.classList.add("translate-x-0");
+    menu.classList.add("transition");
 });
 
 closeButton.addEventListener("click", function(){
-    menu.classList.add("hidden");
+    menu.classList.remove("translate-x-0");
+    menu.classList.add("translate-x-full");
+    menu.classList.add("transition");
 })
 
 product.classList.add('on-active');
@@ -27,6 +33,7 @@ project.addEventListener('click', () => {
     subProject.style.display = "grid";
     subProduct.style.display = "none";
     project.classList.add('on-active');
+    project.classList.add("transition");
     product.classList.remove('on-active');
 });
 

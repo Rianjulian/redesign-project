@@ -21,8 +21,8 @@
 
     <!-- NAV SECTION  -->
 
-    <nav class="grid grid-cols-2 bg-white px-8 py-5 items-center | sm:px-12 | md:py-8 md:px-16 | lg:bg-transparent lg:py-2 lg:px-24 lg:grid-cols-none lg:justify-between | xl:py-3">
-        
+    <nav class="fixed top-0 z-10 w-full grid grid-cols-2 bg-white px-8 py-5 items-center | sm:px-12 | md:py-8 md:px-16 | lg:static lg:bg-transparent lg:py-2 lg:px-24 lg:grid-cols-none lg:justify-between | xl:py-3">
+
         <!-- Logo Nav -->
         <div class="logo w-32 | lg:w-28 | xl:w-32 | 2xl:w-40">
             <img src="images/Logo-tads.svg" alt="logo">
@@ -36,7 +36,7 @@
 
         <!-- Menu -->
         <div id="menu"
-            class="hidden relative flex-col mt-4 py-5 w-full h-screen text-white gap-y-20 bg-orange-600 col-start-1 col-end-4 justify-center items-center | md:mt-8 md:py-8 | lg:mt-0 lg:py-2 lg:h-fit lg:bg-transparent lg:text-black lg:grid lg:gap-10 lg:justify-items-end lg:items-center lg:grid-flow-col lg:row-start-1 lg:row-end-1 lg:col-start-2 lg:col-end-2 lg:order-1| xl:gap-20 | 2xl:gap-20">
+            class="translate-x-full duration-500 delay-100 ease-in-out absolute flex-col py-5 w-10/12 top-0 right-0 h-screen text-white gap-y-20 bg-orange-600 col-start-1 col-end-4 justify-center items-center | md:mt-8 md:py-8 | lg:static lg:transform-none lg:w-full lg:mt-0 lg:py-2 lg:h-fit lg:bg-transparent lg:text-black lg:grid lg:gap-10 lg:justify-items-end lg:items-center lg:grid-flow-col lg:row-start-1 lg:row-end-1 lg:col-start-2 lg:col-end-2 lg:order-1| xl:gap-20 | 2xl:gap-20">
             <div id="closeButton" class="bg-white absolute top-0 right-0 mt-10 tab-link h-fit lg:hidden py-2 px-5">
                 <span class="iconify text-3xl" data-icon="eva:close-outline" style="color: #ff8000;"></span>
             </div>
@@ -64,8 +64,8 @@
 
         <!-- Hero Element -->
         <section class="hero-element">
-            <div class="grid h-screen  px-8 py-5 my-4 || sm:h-auto sm:px-12 sm:gap-y-16 || md:h-auto md:px-16 md:gap-y-20 || lg:py-20 lg:px-24 lg:h-fit lg:grid-cols-2 || xl:-mb-40">
-                
+            <div class="grid h-screen px-8 py-8 mt-12 mb-4 || sm:h-auto sm:px-12 sm:gap-y-16 || md:h-auto md:px-16 md:gap-y-20 || lg:py-20 lg:px-24 lg:h-fit lg:grid-cols-2 || xl:-mb-40">
+
                 <!-- Hero Content -->
                 <div class="hero-content grid justify-items-start content-center gap-2 || lg:-mt-24 || xl:-mt-40">
                     <span class="text-white w-fit h-fit py-3 px-4 bg-orange-500 rounded-full | lg:w-fit lg:text-white lg:py-2 lg:px-2">
@@ -186,9 +186,14 @@
                     <h2 class="lato text-orange-500 text-xl leading-1 | lg:text-xl | xl:text-xl | 2xl:text-xl">SERVICE</h2>
                     <h1 class="poppins font-bold text-black text-3xl | lg:text-2xl | xl:text-3xl | 2xl:text-4xl">OUR SERVICE</h1>
                 </div>
-                <div class="toggle-button grid grid-flow-col justify-between p-2 mt-5 rounded-full bg-slate-300">
-                    <button class="px-6 py-4 text-sm text-black rounded-full" id="product">PRODUCT</button>
-                    <button class="px-6 py-4 text-sm text-black rounded-full" id="project">PROJECT</button>
+                <div class="toggle-button grid grid-flow-col justify-between py-2 px-4 mt-5 rounded-full bg-slate-300">
+                    <!-- <button class="px-6 py-4 text-sm text-black rounded-full" id="product">PRODUCT</button>
+                    <button class="px-6 py-4 text-sm text-black rounded-full" id="project">PROJECT</button> -->
+                        <input type="radio" class="switch-input" name="view" value="week" id="product" checked>
+                        <label for="week" class="switch-label switch-label-off px-3 py-2">Week</label>
+                        <input type="radio" class="switch-input" name="view" value="month" id="project">
+                        <label for="month" class="switch-label switch-label-on px-3 py-2">Month</label>
+                        <span class="switch-selection rounded-full"></span>
                 </div>
                 <p class="lato font-light text-center text-black text-sm leading-relaxed w-60 | md:text-base md:w-80">
                     Finally, System will be ready
