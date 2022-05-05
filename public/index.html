@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" type="text/css" />
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +22,7 @@
 
     <!-- NAV SECTION  -->
 
-    <nav class="fixed top-0 z-10 w-full grid grid-cols-2 bg-white px-8 py-5 items-center | sm:px-12 | md:py-8 md:px-16 | lg:static lg:bg-transparent lg:py-2 lg:px-24 lg:grid-cols-none lg:justify-between | xl:py-3">
+    <nav class="fixed top-0 z-20 w-full grid grid-cols-2 bg-white px-8 py-5 items-center | sm:px-12 | md:py-8 md:px-16 | lg:static lg:bg-transparent lg:py-2 lg:px-24 lg:grid-cols-none lg:justify-between | xl:py-3">
 
         <!-- Logo Nav -->
         <div class="logo w-32 | lg:w-28 | xl:w-32 | 2xl:w-40">
@@ -36,18 +37,18 @@
 
         <!-- Menu -->
         <div id="menu"
-            class="translate-x-full duration-500 delay-100 ease-in-out absolute flex-col py-5 w-10/12 top-0 right-0 h-screen text-white gap-y-20 bg-orange-600 col-start-1 col-end-4 justify-center items-center | md:mt-8 md:py-8 | lg:static lg:transform-none lg:w-full lg:mt-0 lg:py-2 lg:h-fit lg:bg-transparent lg:text-black lg:grid lg:gap-10 lg:justify-items-end lg:items-center lg:grid-flow-col lg:row-start-1 lg:row-end-1 lg:col-start-2 lg:col-end-2 lg:order-1| xl:gap-20 | 2xl:gap-20">
+            class="translate-x-full duration-500 delay-100 ease-in-out absolute flex-col py-5 w-10/12 top-0 right-0 h-screen text-white gap-y-20 bg-orange-600 col-start-1 col-end-4 justify-center items-center | md:py-8 | lg:static lg:transform-none lg:w-full lg:mt-0 lg:py-2 lg:h-fit lg:bg-transparent lg:text-black lg:grid lg:gap-10 lg:justify-items-end lg:items-center lg:grid-flow-col lg:row-start-1 lg:row-end-1 lg:col-start-2 lg:col-end-2 lg:order-1| xl:gap-20 | 2xl:gap-20">
             <div id="closeButton" class="bg-white absolute top-0 right-0 mt-10 tab-link h-fit lg:hidden py-2 px-5">
                 <span class="iconify text-3xl" data-icon="eva:close-outline" style="color: #ff8000;"></span>
             </div>
             <div class="tab-link lato">
-                <a href="#" class="text-base h-fit p-5 || lg:text-sm lg:p-1 | xl:text-sm | 2xl:text-lg">Home</a>
+                <a href="#" class="text-xl h-fit p-5 || md:text-xl || lg:text-sm lg:p-1 || xl:text-sm || 2xl:text-lg">Home</a>
             </div>
             <div class="tab-link lato">
-                <a href="#" class="text-base h-fit p-5 | lg:text-sm lg:p-1 | xl:text-sm | 2xl:text-lg">Our Service</a>
+                <a href="#" class="text-xl h-fit p-5 || md:text-xl || lg:text-sm lg:p-1 || xl:text-sm || 2xl:text-lg">Our Service</a>
             </div>
             <div class="tab-link lato">
-                <a href="#" class="text-base h-fit p-5 | lg:text-sm lg:p-1 | xl:text-sm | 2xl:text-lg">Career</a>
+                <a href="#" class="text-xl h-fit p-5 || md:text-xl || lg:text-sm lg:p-1 || xl:text-sm || 2xl:text-lg">Career</a>
             </div>
             <div class="tab-link lato button">
                 <button
@@ -64,10 +65,11 @@
 
         <!-- Hero Element -->
         <section class="hero-element">
-            <div class="grid h-screen px-8 py-8 mt-12 mb-4 || sm:h-auto sm:px-12 sm:gap-y-16 || md:h-auto md:px-16 md:gap-y-20 || lg:py-20 lg:px-24 lg:h-fit lg:grid-cols-2 || xl:-mb-40">
+            <div class="grid h-screen px-8 py-8 mt-12 mb-4 || sm:h-auto sm:px-12 sm:gap-y-16 || md:h-auto md:px-16 md:py-28 md:gap-y-20 || lg:py-20 lg:px-24 lg:h-fit lg:grid-cols-2 || xl:-mb-40">
 
                 <!-- Hero Content -->
-                <div class="hero-content grid justify-items-start content-center gap-2 || lg:-mt-24 || xl:-mt-40">
+                <div class="hero-content grid justify-items-start content-center gap-2 || lg:-mt-24 || xl:-mt-40" data-aos="fade-right" data-aos-duration="1500"
+                data-aos-delay="500" data-aos-easing="ease-in-out">
                     <span class="text-white w-fit h-fit py-3 px-4 bg-orange-500 rounded-full | lg:w-fit lg:text-white lg:py-2 lg:px-2">
                         Twosides.id</span>
                     <h1 class="roboto text-3xl font-black mt-5 w-full leading-tight max-w-md || sm:w-4/5 sm:text-4xl sm:max-w-lg || md:text-4xl md:w-9/12 || lg:mt-8 lg:w-3/4 lg:h-fit lg:leading-tight lg:text-3xl || xl:text-4xl || 2xl:text-5xl">
@@ -112,11 +114,11 @@
         <section class="about-us">
             <div
                 class="px-8 py-24 grid content-center justify-center gap-8 opacity-80 bg-black h-full | md:py-28 md:px-20 | lg:h-screen lg:px-40 lg:w-fit | xl:px-72 xl:leading-loose xl:gap-y-5 | 2xl:px-80">
-                <div class="grid leading-3">
+                <div class="grid leading-3" data-aos="fade-up" data-aos-duration="700">
                     <h2 class="lato text-orange-500 text-xl leading-5 | lg:text-xl | xl:text-xl | 2xl:text-xl">INTRO</h2>
                     <h1 class="poppins font-bold text-white text-3xl | lg:text-2xl | xl:text-3xl | 2xl:text-4xl">ABOUT US</h1>
                 </div>
-                <div class="grid gap-y-8">
+                <div class="grid gap-y-8" data-aos="fade-up" data-aos-duration="1000">
                     <p
                         class="lato font-light leading-loose text-white text-sm text-justify tracking-widest | lg:w-full lg:text-base lg:leading-loose | xl:text-lg xl:leading-loose | 2xl:text-lg 2xl:leading-loose">
                         TADS (Technology Api Dua Sisi) is a developer company engaged in designing digital
@@ -142,7 +144,8 @@
                     <h1 class="poppins font-bold text-white text-3xl | lg:text-2xl | xl:text-3xl | 2xl:text-4xl">WHY CHOOSE US?</h1>
                 </div>
                 <div class="mt-5 grid gap-y-12 grid-flow-row content-between | md:grid-flow-col md:gap-x-16 | lg:justify-between lg:gap-x-16 | xl:gap-x-28 | 2xl:gap-x-60">
-                    <div class="grid gap-5">
+                    <div class="grid gap-5" data-aos="fade-up" data-aos-duration="1200"
+                    data-aos-delay="200">
                         <div class="flex items-center gap-4">
                             <img src="images/briefing.png" alt="briefing">
                             <h1 class="poppins text-white text-xl | md:text-lg | lg:text-xl | xl:text-xl">Briefing</h1>
@@ -154,7 +157,8 @@
                             which is done according
                             to client needs.</h2>
                     </div>
-                    <div class="grid gap-5 | lg:gap-x-80">
+                    <div class="grid gap-5" data-aos="fade-up" data-aos-duration="1500"
+                    data-aos-delay="500">
                         <div class="flex items-center gap-4">
                             <img src="images/development.png" alt="development">
                             <h1 class="poppins text-white text-xl | md:text-lg | lg:text-xl | xl:text-xl">Development</h1>
@@ -164,7 +168,8 @@
                             implementation ideas into Code and
                             made accordingly Client Customization.</h2>
                     </div>
-                    <div class="grid gap-5">
+                    <div class="grid gap-5" data-aos="fade-up" data-aos-duration="1700"
+                    data-aos-delay="700">
                         <div class="flex items-center gap-4">
                             <img src="images/launch.png" alt="launch">
                             <h1 class="poppins text-white text-xl | md:text-lg | lg:text-xl | xl:text-xl">Launch</h1>
@@ -173,7 +178,7 @@
                             class="lato font-light text-white leading-relaxed w-64 | md:w-44 md:text-justify md:text-sm md:leading-relaxed | lg:leading-loose lg:w-60 lg:text-base lg:text-left | xl:text-lg xl:leading-relaxed">
                             Finally, System will be ready
                             used after work very detailed
-                            and Customization.</h2>
+                            and Customization.</h2> 
                     </div>
                 </div>
             </div>
@@ -186,20 +191,16 @@
                     <h2 class="lato text-orange-500 text-xl leading-1 | lg:text-xl | xl:text-xl | 2xl:text-xl">SERVICE</h2>
                     <h1 class="poppins font-bold text-black text-3xl | lg:text-2xl | xl:text-3xl | 2xl:text-4xl">OUR SERVICE</h1>
                 </div>
-                <div class="toggle-button grid grid-flow-col justify-between py-2 px-4 mt-5 rounded-full bg-slate-300">
-                    <!-- <button class="px-6 py-4 text-sm text-black rounded-full" id="product">PRODUCT</button>
-                    <button class="px-6 py-4 text-sm text-black rounded-full" id="project">PROJECT</button> -->
-                        <input type="radio" class="switch-input" name="view" value="week" id="product" checked>
-                        <label for="week" class="switch-label switch-label-off px-3 py-2">Week</label>
-                        <input type="radio" class="switch-input" name="view" value="month" id="project">
-                        <label for="month" class="switch-label switch-label-on px-3 py-2">Month</label>
-                        <span class="switch-selection rounded-full"></span>
+                <div class="relative toggle-button grid grid-flow-col justify-between py-2 px-4 mt-5 rounded-full bg-slate-300">
+                    <button class="z-10 px-6 py-4 text-sm text-black rounded-full" id="product">PRODUCT</button>
+                    <button class="z-10 px-6 py-4 text-sm text-black rounded-full" id="project">PROJECT</button>
+                    <span class="translate-x-1 switch-selection rounded-full"></span>
                 </div>
                 <p class="lato font-light text-center text-black text-sm leading-relaxed w-60 | md:text-base md:w-80">
                     Finally, System will be ready
                     used after work very detailed
                     and Customization.</p>
-                <div class="container justify-items-center" id="product-content">
+                <div class="container justify-items-center" id="product-content" data-aos="fade-up" data-aos-duration="1000">
                     <div class="product grid | md:grid-cols-2 | lg:mt-10 lg:grid-cols-3">
                         <div class="card px-10 py-16 border border-slate-200">
                             <h1 class="poppins text-3xl font-semibold">$200<span class="text-sm font-normal">per
@@ -311,7 +312,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container justify-center" id="project-content">
+                <div class="container justify-center" id="project-content" data-aos="fade-up" data-aos-duration="1000">
                     <div class="project mt-10 px-5 grid justify-items-center | md:grid-cols-2 md:px-6 | lg:mt-10 lg:grid-cols-3 | xl:px-36">
                         <div class="card grid border border-slate-200 w-80 | sm:w-80">
                             <img class="w-full" src="images/web.png" alt="Web-Design">
@@ -457,15 +458,15 @@
                         join us !</p>
                 </div>
                 <div class="grid gap-1">
-                    <div class="job py-5 grid grid-flow-col justify-between border-b border-slate-400 | lg:py-5">
+                    <div class="job py-5 grid grid-flow-col justify-between border-b border-slate-400 | lg:py-5" data-aos="fade-up" data-aos-duration="700" data-aos-delay="500">
                         <h1 class="poppins text-white | lg:text-xl">DIGITAL MARKETING</h1>
                         <button class="text-sm text-gray-300">VIEW</button>
                     </div>
-                    <div class="job py-5 grid grid-flow-col justify-between border-b border-slate-400 | lg:py-5">
+                    <div class="job py-5 grid grid-flow-col justify-between border-b border-slate-400 | lg:py-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                         <h1 class="poppins text-white | lg:text-xl">ADMIN CUSTOMER</h1>
                         <button class="text-sm text-gray-300">VIEW</button>
                     </div>
-                    <div class="job py-5 grid grid-flow-col justify-between border-b border-slate-400 | lg:py-5">
+                    <div class="job py-5 grid grid-flow-col justify-between border-b border-slate-400 | lg:py-5" data-aos="fade-up" data-aos-duration="900" data-aos-delay="900">
                         <h1 class="poppins text-white | lg:text-xl">IT DEVELOPMENT</h1>
                         <button class="text-sm text-gray-300">VIEW</button>
                     </div>
@@ -477,7 +478,7 @@
         <section class="contact-us">
             <div
                 class="px-8 py-28 grid gap-10 bg-black | md:px-24 | lg:px-24 lg:py-40 lg:grid-cols-2 lg:items-center lg:gap-x-32">
-                <div class="grid order-last mt-5 | lg:order-1">
+                <div class="grid order-last mt-5 | lg:order-1" data-aos="fade-right" data-aos-duration="1000">
                     <div class="text-left leading-3">
                         <h2 class="lato text-orange-500 text-xl leading-7 | lg:text-xl | xl:text-xl | 2xl:text-xl">ANY QUESTIONS?</h2>
                         <h1 class="poppins font-bold text-white text-3xl | lg:text-2xl | xl:text-3xl | 2xl:text-4xl">CONTACT US</h1>
@@ -550,6 +551,7 @@
 
         <script src="../OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
         <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+        <script src="../node_modules/aos/dist/aos.js"></script>
         <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
         <script src="../public/js/script.js"></script>
 </body>

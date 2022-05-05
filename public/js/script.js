@@ -1,6 +1,7 @@
 // @ts-nocheck
 const hamburger = document.getElementById('hamburgerButton');
 const nav = document.querySelector('nav');
+const switchButton = document.querySelector(".switch-selection");
 const menu = document.getElementById('menu');
 const closeButton =  document.getElementById('closeButton');
 const project = document.getElementById('project');
@@ -26,8 +27,11 @@ product.classList.add('on-active');
 product.addEventListener('click', () => {
     subProject.style.display = "none";
     subProduct.style.display = "grid";
-    project.classList.remove('on-active');
     product.classList.add('on-active');
+    project.classList.remove('on-active');
+    switchButton.classList.add("transition", "ease-linear");
+    switchButton.classList.add("translate-x-1");
+    switchButton.classList.remove("translate-x-28");
 });
 project.addEventListener('click', () => {
     subProject.style.display = "grid";
@@ -35,8 +39,25 @@ project.addEventListener('click', () => {
     project.classList.add('on-active');
     project.classList.add("transition");
     product.classList.remove('on-active');
+    switchButton.classList.add("translate-x-28");
+    switchButton.classList.remove("translate-x-1");
 });
 
+  AOS.init();
+
+  project.addEventListener("click", function() {
+    subProject.classList.remove('aos-animate');
+    setTimeout(function() {
+        subProject.classList.add('aos-animate');
+    }, 400);
+});
+
+  product.addEventListener("click", function() {
+    subProduct.classList.remove('aos-animate');
+    setTimeout(function() {
+        subProduct.classList.add('aos-animate');
+    }, 400);
+});
 
 // hamburger.addEventListener('click', function() {
 //     menu.classList.remove('hidden');
@@ -69,6 +90,10 @@ project.addEventListener('click', () => {
                 items: 1,
                 nav: false,
                 dots: false,
+                autoplay: true,
+                smartSpeed: 800,
+                animateIn: 'linear',
+                animateOut: 'linear',
                 margin: 100,
                 stagePadding: 40,
             },
@@ -76,6 +101,10 @@ project.addEventListener('click', () => {
                 items: 1,
                 nav: false,
                 dots: false,
+                autoplay: true,
+                smartSpeed: 800,
+                animateIn: 'linear',
+                animateOut: 'linear',
                 margin: 100,
                 stagePadding: 60,
             },
@@ -83,6 +112,10 @@ project.addEventListener('click', () => {
                 items: 1,
                 nav: false,
                 dots: false,
+                autoplay: true,
+                smartSpeed: 800,
+                animateIn: 'linear',
+                animateOut: 'linear',
                 margin: 200,
                 stagePadding: 100,
             },
@@ -90,6 +123,10 @@ project.addEventListener('click', () => {
                 items: 1,
                 nav: false,
                 dots: false,
+                autoplay: true,
+                smartSpeed: 800,
+                animateIn: 'linear',
+                animateOut: 'linear',
                 margin: 200,
                 stagePadding: 150,
             },
@@ -97,12 +134,20 @@ project.addEventListener('click', () => {
                 items: 1,
                 nav: false,
                 dots: false,
+                autoplay: true,
+                smartSpeed: 800,
+                animateIn: 'linear',
+                animateOut: 'linear',
                 margin: 250,
                 stagePadding: 200,
             },
             768: {
                 items: 3,
                 nav: false,
+                autoplay: true,
+                smartSpeed: 800,
+                animateIn: 'linear',
+                animateOut: 'linear',
                 margin: 100,
                 stagePadding: 60,
             },
