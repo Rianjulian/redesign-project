@@ -8,6 +8,10 @@
     --hero-paragraph: "Raleway", sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .lato {
     font-family: var(--lato-font);
 }
