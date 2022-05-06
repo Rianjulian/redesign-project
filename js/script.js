@@ -2,7 +2,7 @@
 const hamburger = document.getElementById('hamburgerButton');
 const nav = document.querySelector('nav');
 const menu = document.getElementById('menu');
-const closeButton =  document.getElementById('closeButton');
+const closeButton = document.getElementById('closeButton');
 // Service init
 const switchButton = document.querySelector(".switch-selection");
 const project = document.getElementById('project');
@@ -25,7 +25,7 @@ hamburger.addEventListener("click", function () {
     menu.classList.add("transition");
 });
 
-closeButton.addEventListener("click", function(){
+closeButton.addEventListener("click", function () {
     menu.classList.remove("translate-x-0");
     menu.classList.add("translate-x-full");
     menu.classList.add("transition");
@@ -52,41 +52,41 @@ project.addEventListener('click', () => {
     switchButton.classList.remove("translate-x-1");
 });
 
-  AOS.init();
+AOS.init();
 
-  project.addEventListener("click", function() {
+project.addEventListener("click", function () {
     subProject.classList.remove('aos-animate');
-    setTimeout(function() {
+    setTimeout(function () {
         subProject.classList.add('aos-animate');
     }, 400);
 });
 
-  product.addEventListener("click", function() {
+product.addEventListener("click", function () {
     subProduct.classList.remove('aos-animate');
-    setTimeout(function() {
+    setTimeout(function () {
         subProduct.classList.add('aos-animate');
     }, 400);
 });
 
 form.addEventListener('submit', e => {
-	e.preventDefault();
-	// Show The Loading button
-	loadBtn.classList.toggle("hidden");
-	submitBtn.classList.toggle("hidden");
-	fetch(scriptURL, {
-			method: 'POST',
-			body: new FormData(form)
-		})
-		.then(response => {
-			// Show The Submit button
-			loadBtn.classList.toggle("hidden");
-			submitBtn.classList.toggle("hidden");
-			alert.classList.toggle("hidden");
+    e.preventDefault();
+    // Show The Loading button
+    loadBtn.classList.toggle("hidden");
+    submitBtn.classList.toggle("hidden");
+    fetch(scriptURL, {
+            method: 'POST',
+            body: new FormData(form)
+        })
+        .then(response => {
+            // Show The Submit button
+            loadBtn.classList.toggle("hidden");
+            submitBtn.classList.toggle("hidden");
+            alert.classList.toggle("hidden");
             alert.classList.add("flex");
-			form.reset()
-			console.log('Success!', response)
-		})
-		.catch(error => console.error('Error!', error.message))
+            form.reset()
+            console.log('Success!', response)
+        })
+        .catch(error => console.error('Error!', error.message))
 })
 
 closeAlert.addEventListener("click", function () {
@@ -103,7 +103,6 @@ function autoscrollToHere() {
 
         event.preventDefault();
 
-        // @ts-ignore
         gsap.to(window, {
             duration: 5.0,
             delay: 0,
@@ -117,125 +116,125 @@ function autoscrollToHere() {
 }
 
 
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        navText: ["<span class='nav-btn prev-slide'><</span>", "<span class='nav-btn next-slide'>></span>"],
-        responsiveClass:true,
-        center:true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: true,
-                autoplay: true,
-                smartSpeed: 800,
-                animateIn: 'linear',
-                animateOut: 'linear',
-                stagePadding: 80,
-                margin: 100,
-                nav: false,
-                dots: false
-            },
-            320: {
-                items: 1,
-                nav: false,
-                dots: false,
-                autoplay: true,
-                smartSpeed: 800,
-                animateIn: 'linear',
-                animateOut: 'linear',
-                margin: 100,
-                stagePadding: 40,
-            },
-            375: {
-                items: 1,
-                nav: false,
-                dots: false,
-                autoplay: true,
-                smartSpeed: 800,
-                animateIn: 'linear',
-                animateOut: 'linear',
-                margin: 100,
-                stagePadding: 60,
-            },
-            425: {
-                items: 1,
-                nav: false,
-                dots: false,
-                autoplay: true,
-                smartSpeed: 800,
-                animateIn: 'linear',
-                animateOut: 'linear',
-                margin: 200,
-                stagePadding: 100,
-            },
-            540: {
-                items: 1,
-                nav: false,
-                dots: false,
-                autoplay: true,
-                smartSpeed: 800,
-                animateIn: 'linear',
-                animateOut: 'linear',
-                margin: 200,
-                stagePadding: 150,
-            },
-            640: {
-                items: 1,
-                nav: false,
-                dots: false,
-                autoplay: true,
-                smartSpeed: 800,
-                animateIn: 'linear',
-                animateOut: 'linear',
-                margin: 250,
-                stagePadding: 200,
-            },
-            768: {
-                items: 3,
-                nav: false,
-                autoplay: true,
-                smartSpeed: 800,
-                animateIn: 'linear',
-                animateOut: 'linear',
-                margin: 100,
-                stagePadding: 60,
-            },
-            1024: {
-                items: 3,
-                nav: false,
-                dots: false,
-                loop: true,
-                stagePadding: 20,
-                margin: 80,
-                autoplay: true,
-                smartSpeed: 500,
-                animateIn: 'fadeIn',
-                animateOut: 'fadeOut',
-            },
-            1280:{
-                items: 3,
-                nav: false,
-                dots: false,
-                loop: true,
-                stagePadding: 1,
-                margin: 80,
-                autoplay: true,
-                smartSpeed: 500,
-                animateIn: 'fadeIn',
-                animateOut: 'fadeOut',
-            },
-            1440: {
-                items: 3,
-                nav: false,
-                dots: false,
-                loop: true,
-                // center: true,
-                autoplay: true,
-                smartSpeed: 800,
-                animateIn: 'fadeIn',
-                animateOut: 'fadeOut',
-                stagePadding: 0,
-                margin: 150,
-            },
-        }
-    })
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    navText: ["<span class='nav-btn prev-slide'><</span>", "<span class='nav-btn next-slide'>></span>"],
+    responsiveClass: true,
+    center: true,
+    responsive: {
+        0: {
+            items: 1,
+            nav: true,
+            autoplay: true,
+            smartSpeed: 800,
+            animateIn: 'linear',
+            animateOut: 'linear',
+            stagePadding: 80,
+            margin: 100,
+            nav: false,
+            dots: false
+        },
+        320: {
+            items: 1,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            smartSpeed: 800,
+            animateIn: 'linear',
+            animateOut: 'linear',
+            margin: 100,
+            stagePadding: 40,
+        },
+        375: {
+            items: 1,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            smartSpeed: 800,
+            animateIn: 'linear',
+            animateOut: 'linear',
+            margin: 100,
+            stagePadding: 60,
+        },
+        425: {
+            items: 1,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            smartSpeed: 800,
+            animateIn: 'linear',
+            animateOut: 'linear',
+            margin: 200,
+            stagePadding: 100,
+        },
+        540: {
+            items: 1,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            smartSpeed: 800,
+            animateIn: 'linear',
+            animateOut: 'linear',
+            margin: 200,
+            stagePadding: 150,
+        },
+        640: {
+            items: 1,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            smartSpeed: 800,
+            animateIn: 'linear',
+            animateOut: 'linear',
+            margin: 250,
+            stagePadding: 200,
+        },
+        768: {
+            items: 3,
+            nav: false,
+            autoplay: true,
+            smartSpeed: 800,
+            animateIn: 'linear',
+            animateOut: 'linear',
+            margin: 100,
+            stagePadding: 60,
+        },
+        1024: {
+            items: 3,
+            nav: false,
+            dots: false,
+            loop: true,
+            stagePadding: 20,
+            margin: 80,
+            autoplay: true,
+            smartSpeed: 500,
+            animateIn: 'fadeIn',
+            animateOut: 'fadeOut',
+        },
+        1280: {
+            items: 3,
+            nav: false,
+            dots: false,
+            loop: true,
+            stagePadding: 1,
+            margin: 80,
+            autoplay: true,
+            smartSpeed: 500,
+            animateIn: 'fadeIn',
+            animateOut: 'fadeOut',
+        },
+        1440: {
+            items: 3,
+            nav: false,
+            dots: false,
+            loop: true,
+            // center: true,
+            autoplay: true,
+            smartSpeed: 800,
+            animateIn: 'fadeIn',
+            animateOut: 'fadeOut',
+            stagePadding: 0,
+            margin: 150,
+        },
+    }
+})
