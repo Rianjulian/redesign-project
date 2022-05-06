@@ -1,16 +1,24 @@
-// @ts-nocheck
+// Sidebar init
 const hamburger = document.getElementById('hamburgerButton');
 const nav = document.querySelector('nav');
-const switchButton = document.querySelector(".switch-selection");
 const menu = document.getElementById('menu');
 const closeButton =  document.getElementById('closeButton');
+// Service init
+const switchButton = document.querySelector(".switch-selection");
 const project = document.getElementById('project');
 const product = document.getElementById('product');
 const subProject = document.getElementById('project-content');
 const subProduct = document.getElementById('product-content');
+// Contact Form init
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwpm8rKw0RfI2EXI9S-i4O9OTG-jOnKIV0smLoXBRw5QScajDhdpVYS9tA7_e7RR2DRFw/exec'
+const form = document.forms['message-form-contact']
+const submitBtn = document.querySelector(".submit");
+const loadBtn = document.querySelector(".loading");
+const closeAlert = document.querySelector(".close");
+const alert = document.querySelector(".alert");
+var linksWithHash = document.querySelectorAll('a[href*=\\#]:not([href=\\#])')
 
 hamburger.addEventListener("click", function () {
-    // menu.classList.remove("hidden");
     menu.classList.remove("translate-x-full");
     menu.classList.add("flex");
     menu.classList.add("translate-x-0");
@@ -33,6 +41,7 @@ product.addEventListener('click', () => {
     switchButton.classList.add("translate-x-1");
     switchButton.classList.remove("translate-x-28");
 });
+
 project.addEventListener('click', () => {
     subProject.style.display = "grid";
     subProduct.style.display = "none";
@@ -59,14 +68,54 @@ project.addEventListener('click', () => {
     }, 400);
 });
 
-// hamburger.addEventListener('click', function() {
-//     menu.classList.remove('hidden');
-//     if (menu.classList.contains === "hidden") {
-//         menu.classList.remove("grid");
-//       } else {
-//         menu.classList.add('hidden');
-//       }
-//     });
+form.addEventListener('submit', e => {
+	e.preventDefault();
+	// Show The Loading button
+	loadBtn.classList.toggle("hidden");
+	submitBtn.classList.toggle("hidden");
+	fetch(scriptURL, {
+			method: 'POST',
+			body: new FormData(form)
+		})
+		.then(response => {
+			// Show The Submit button
+			loadBtn.classList.toggle("hidden");
+			submitBtn.classList.toggle("hidden");
+			alert.classList.toggle("hidden");
+            alert.classList.add("flex");
+			form.reset()
+			console.log('Success!', response)
+		})
+		.catch(error => console.error('Error!', error.message))
+})
+
+closeAlert.addEventListener("click", function () {
+    alert.classList.add("hidden");
+})
+
+linksWithHash.forEach((link) => {
+    link.addEventListener('click', autoscrollToHere);
+});
+
+function autoscrollToHere() {
+
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+
+        event.preventDefault();
+
+        // @ts-ignore
+        gsap.to(window, {
+            duration: 5.0,
+            delay: 0,
+            scrollTo: {
+                y: this.hash,
+                offsetY: -100
+            },
+        });
+
+    }
+}
+
 
     $('.owl-carousel').owlCarousel({
         loop: true,
@@ -180,13 +229,13 @@ project.addEventListener('click', () => {
                 nav: false,
                 dots: false,
                 loop: true,
-                center: true,
+                // center: true,
                 autoplay: true,
                 smartSpeed: 800,
                 animateIn: 'fadeIn',
                 animateOut: 'fadeOut',
                 stagePadding: 0,
-                margin: 100,
-            }
+                margin: 150,
+            },
         }
     })

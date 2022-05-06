@@ -8,7 +8,7 @@
     --hero-paragraph: "Raleway", sans-serif;
 }
 
-html{
+body{
     scroll-behavior: smooth;
 }
 
