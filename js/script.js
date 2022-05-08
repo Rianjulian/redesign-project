@@ -1,6 +1,9 @@
 // Sidebar init
+// @ts-ignore
 const hamburger = document.getElementById('hamburgerButton');
+// @ts-ignore
 const nav = document.querySelector('nav');
+// @ts-ignore
 const menu = document.getElementById('menu');
 const closeButton = document.getElementById('closeButton');
 // Service init
@@ -15,6 +18,7 @@ const form = document.forms['message-form-contact']
 const submitBtn = document.querySelector(".submit");
 const loadBtn = document.querySelector(".loading");
 const closeAlert = document.querySelector(".close");
+// @ts-ignore
 const alert = document.querySelector(".alert");
 var linksWithHash = document.querySelectorAll('a[href*=\\#]:not([href=\\#])')
 
@@ -52,6 +56,7 @@ project.addEventListener('click', () => {
     switchButton.classList.remove("translate-x-1");
 });
 
+// @ts-ignore
 AOS.init();
 
 project.addEventListener("click", function () {
@@ -81,7 +86,9 @@ form.addEventListener('submit', e => {
             // Show The Submit button
             loadBtn.classList.toggle("hidden");
             submitBtn.classList.toggle("hidden");
+            // @ts-ignore
             alert.classList.toggle("hidden");
+            // @ts-ignore
             alert.classList.add("flex");
             form.reset()
             console.log('Success!', response)
@@ -90,6 +97,7 @@ form.addEventListener('submit', e => {
 })
 
 closeAlert.addEventListener("click", function () {
+    // @ts-ignore
     alert.classList.add("hidden");
 })
 
@@ -103,6 +111,7 @@ function autoscrollToHere() {
 
         event.preventDefault();
 
+        // @ts-ignore
         gsap.to(window, {
             duration: 5.0,
             delay: 0,
@@ -116,6 +125,7 @@ function autoscrollToHere() {
 }
 
 
+// @ts-ignore
 $('.owl-carousel').owlCarousel({
     loop: true,
     navText: ["<span class='nav-btn prev-slide'><</span>", "<span class='nav-btn next-slide'>></span>"],
@@ -131,6 +141,7 @@ $('.owl-carousel').owlCarousel({
             animateOut: 'linear',
             stagePadding: 80,
             margin: 100,
+            // @ts-ignore
             nav: false,
             dots: false
         },
@@ -207,7 +218,9 @@ $('.owl-carousel').owlCarousel({
             stagePadding: 20,
             margin: 80,
             autoplay: true,
-            smartSpeed: 500,
+            slideSpeed: 800,
+            autoplaySpeed: 3000,
+            autoplayTimeout: 3000,
             animateIn: 'fadeIn',
             animateOut: 'fadeOut',
         },
@@ -219,7 +232,9 @@ $('.owl-carousel').owlCarousel({
             stagePadding: 1,
             margin: 80,
             autoplay: true,
-            smartSpeed: 500,
+            slideSpeed: 800,
+            autoplaySpeed: 3000,
+            autoplayTimeout: 3000,
             animateIn: 'fadeIn',
             animateOut: 'fadeOut',
         },
@@ -230,7 +245,9 @@ $('.owl-carousel').owlCarousel({
             loop: true,
             // center: true,
             autoplay: true,
-            smartSpeed: 800,
+            slideSpeed: 800,
+            autoplaySpeed: 3000,
+            autoplayTimeout: 3000,
             animateIn: 'fadeIn',
             animateOut: 'fadeOut',
             stagePadding: 0,

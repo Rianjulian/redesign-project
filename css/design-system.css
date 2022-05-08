@@ -51,7 +51,7 @@ body{
 .about-us {
     background-image: url("../images/about-us.png");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center right;
     background-size: cover;
     width: 100%;
 }
@@ -59,7 +59,7 @@ body{
 .career {
     background-image: url("../images/career.png");
     background-repeat: no-repeat;
-    background-position: left top;
+    background-position: center left;
     background-size: cover;
     width: 100%;
 }
