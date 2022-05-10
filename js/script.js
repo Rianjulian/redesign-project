@@ -105,6 +105,15 @@ linksWithHash.forEach((link) => {
     link.addEventListener('click', autoscrollToHere);
 });
 
+$(document).on('scroll', function () {
+    if ($(this).scrollTop()) {
+        $('nav').addClass('drop-shadow-lg');
+    } 
+    else{
+        $('nav').removeClass('drop-shadow-lg');
+    }
+});
+
 function autoscrollToHere() {
 
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
